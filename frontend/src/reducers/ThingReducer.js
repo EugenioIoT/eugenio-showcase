@@ -15,13 +15,15 @@ const thingReducer = (state=initialState, action) => {
     return {
       ...state,
       showMessage: false,
-      messageType: ''
+      messageType: '',
+      showLoading: action.showLoading
     };
   case THING_SUCCESS:
     return {
       ...state, 
       messageType: MessageType.INFO,
-      things: action.things
+      things: action.things,
+      showLoading: action.showLoading
     };
   case THING_ERROR:
     return {
@@ -29,7 +31,8 @@ const thingReducer = (state=initialState, action) => {
       messageTitle: I18n.t('ingestion.message.thingApiError'),
       specificmessageTitle: state.message,
       showMessage: true,
-      messageType: MessageType.ERROR
+      messageType: MessageType.ERROR,
+      showLoading: action.showLoading
     };
 
   default:

@@ -12,26 +12,31 @@ export const SCHEMA_ERROR = 'SCHEMA_ERROR';
 
 function schemaSent() {
     return {
-        type: SCHEMA_SENT
+        type: SCHEMA_SENT,
+        showLoading: true
     }
 }
 
 function schemaError(error) {
     return {
         type: SCHEMA_ERROR,
-        error: error
+        error: error,
+        showLoading: false
     }
 }
 
 function schemaSuccess(json) {
     return {
         type: SCHEMA_SUCCESS,
-        schemas: json
+        schemas: json,
+        showLoading: false
     }
 }
 
 export function findAllSchemas() {
-    return dispatch => {fetch('/api/schemas', {
+    return dispatch => {
+        dispatch(schemaSent());
+        fetch('/api/schemas', {
             method: 'get',
             credentials: 'include',
             redirect: 'follow',

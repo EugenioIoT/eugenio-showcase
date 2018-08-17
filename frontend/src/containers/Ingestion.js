@@ -59,7 +59,7 @@ const mapStateToProps = (state) => {
     specificmessageTitle: ingestionState.specificmessageTitle,
     showMessage: ingestionState.showMessage,
     messageType: ingestionState.messageType,
-    showLoading: ingestionState.showLoading
+    showLoading: ingestionState.showLoading || schemaState.showLoading
   }
 }
 

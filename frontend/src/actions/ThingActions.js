@@ -12,26 +12,31 @@ export const THING_ERROR = 'THING_ERROR';
 
 function thingSent() {
     return {
-        type: THING_SENT
+        type: THING_SENT,
+        showLoading: true
     }
 }
 
 function thingError(error) {
     return {
         type: THING_ERROR,
-        error: error
+        error: error,
+        showLoading: false
     }
 }
 
 function thingSuccess(json) {
     return {
         type: THING_SUCCESS,
-        things: json
+        things: json,
+        showLoading: false
     }
 }
 
 export function findAllThings() {
-    return dispatch => {fetch('/api/things', {
+    return dispatch => {
+        dispatch(thingSent());
+        fetch('/api/things', {
             method: 'get',
             credentials: 'include',
             redirect: 'follow',

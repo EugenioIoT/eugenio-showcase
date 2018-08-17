@@ -5,8 +5,7 @@ const { I18n } = require('react-i18nify');
 
 class IngestionView extends Component {
 	state = {
-		error: null,
-		showInvalidJson: false
+		error: null
 	}
 
 	componentWillMount() {

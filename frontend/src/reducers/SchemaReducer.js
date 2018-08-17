@@ -15,13 +15,15 @@ const schemaReducer = (state=initialState, action) => {
     return {
       ...state,
       showMessage: false,
-      messageType: ''
+      messageType: '',
+      showLoading: action.showLoading,
     };
   case SCHEMA_SUCCESS:
     return {
       ...state, 
       messageType: MessageType.INFO,
-      schemas: action.schemas
+      schemas: action.schemas,
+      showLoading: action.showLoading,
     };
   case SCHEMA_ERROR:
     return {
@@ -29,7 +31,8 @@ const schemaReducer = (state=initialState, action) => {
       messageTitle: I18n.t('ingestion.message.schemaApiError'),
       specificmessageTitle: state.message,
       showMessage: true,
-      messageType: MessageType.ERROR
+      messageType: MessageType.ERROR,
+      showLoading: action.showLoading,
     };
 
   default:

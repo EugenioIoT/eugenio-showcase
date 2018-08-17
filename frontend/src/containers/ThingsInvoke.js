@@ -62,7 +62,7 @@ const mapStateToProps = (state) => {
     specificmessageTitle: thingsInvokeState.specificmessageTitle,
     showMessage: thingsInvokeState.showMessage,
     messageType: thingsInvokeState.messageType,
-    showLoading: thingsInvokeState.showLoading
+    showLoading: thingsInvokeState.showLoading || thingstate.showLoading
   }
 }
 
