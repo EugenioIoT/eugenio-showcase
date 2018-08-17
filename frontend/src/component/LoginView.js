@@ -8,10 +8,10 @@ import { ButtonLoading } from '../component/ButtonLoading';
 
 class Login extends Component {
   state = {
-    username: 'vcosta', 
-    password: 'vcosta123', 
-    tenant: 'eugenio_demo', 
-    apiKey: 'DwHgwFyxRl1Rez3HOGKwUczoTfvwWomq'
+    username: '', 
+    password: '', 
+    tenant: '', 
+    apiKey: ''
   };
 	render() {
 		return (
