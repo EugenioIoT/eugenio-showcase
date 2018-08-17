@@ -6,9 +6,7 @@ import { bindActionCreators } from 'redux';
 
 class DataQueryContainer extends Component {
   dataQuery = (query) => {
-    console.log('action query container');
     this.props.fetchDataQuery(query);
-    console.warn(query);
   };
 
   render() {

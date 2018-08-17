@@ -13,7 +13,6 @@ const initialState = {
 const ingestionReducer = (state=initialState, action) => {
   switch (action.type) {
   case INGESTION_SENT:
-    console.log('ingestion sent');
     return {
       ...state,
       showMessage: false,
@@ -23,7 +22,6 @@ const ingestionReducer = (state=initialState, action) => {
       result: []
     };
   case INGESTION_SUCCESS:
-    console.log('ingestion success');
     return {
       ...state, 
       messageTitle: I18n.t('ingestion.message.successMessage'),
@@ -34,7 +32,6 @@ const ingestionReducer = (state=initialState, action) => {
       showLoading: action.showLoading
     };
   case INGESTION_ERROR:
-    console.log('ingestion error');
     return {
       ...state, 
       messageTitle: I18n.t('ingestion.message.errorApi'),
@@ -44,7 +41,6 @@ const ingestionReducer = (state=initialState, action) => {
       showLoading: action.showLoading
     };
   case INGESTION_CLEAR:
-    console.log('ingestion clear');
     return {
       ...state, 
       messageTitle: '',

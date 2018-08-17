@@ -16,9 +16,7 @@ class IngestionContainer extends Component {
   onChange = (newSchema) => this.setState({ jsonSchema: newSchema });
 
   ingestion = (query) => {
-    console.log('action query container');
     this.props.fetchIngestion(this.state.schema, this.state.jsonSchema);
-    console.warn(query);
   };
 
   getResources = () => {

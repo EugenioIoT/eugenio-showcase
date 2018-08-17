@@ -9,7 +9,6 @@ const initialState = {
 const thingsInvokeReducer = (state=initialState, action) => {
   switch (action.type) {
   case THINGSINVOKE_SENT:
-    console.log('invoke sent');
     return {
       ...state,
       showMessage: false,
@@ -19,7 +18,6 @@ const thingsInvokeReducer = (state=initialState, action) => {
       showLoading: action.showLoading
     };
   case THINGSINVOKE_SUCCESS:
-    console.log('invoke success');
     return {
       ...state, 
       messageTitle: I18n.t('thingsInvoke.message.topten'),
@@ -30,7 +28,6 @@ const thingsInvokeReducer = (state=initialState, action) => {
       showLoading: action.showLoading
     };
   case THINGSINVOKE_ERROR:
-    console.log('invoke error');
     return {
       ...state, 
       messageTitle: I18n.t('thingsInvoke.message.errorApi'),

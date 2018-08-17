@@ -6,9 +6,7 @@ import { bindActionCreators } from 'redux';
 
 class LoginContainer extends Component {
   login = (loginData) => {
-    console.log('action login container');
     this.props.fetchLogin(loginData);
-    console.warn(loginData);
   };
 
   render() {

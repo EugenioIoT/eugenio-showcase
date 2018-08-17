@@ -12,21 +12,18 @@ const initialState = {
 const schemaReducer = (state=initialState, action) => {
   switch (action.type) {
   case SCHEMA_SENT:
-    console.log('schemas sent');
     return {
       ...state,
       showMessage: false,
       messageType: ''
     };
   case SCHEMA_SUCCESS:
-    console.log('schemas success');
     return {
       ...state, 
       messageType: MessageType.INFO,
       schemas: action.schemas
     };
   case SCHEMA_ERROR:
-    console.log('schemas error');
     return {
       ...state, 
       messageTitle: I18n.t('ingestion.message.schemaApiError'),

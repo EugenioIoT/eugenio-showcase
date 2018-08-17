@@ -8,20 +8,17 @@ const initialState = {
 const loginReducer = (state=initialState, action) => {
   switch (action.type) {
   case LOGIN_SENT:
-    console.log('login sent');
     return {
       ...state, 
       error: undefined,
       showLoading: action.showLoading
     };
   case LOGIN_SUCCESS:
-    console.log('login success');
     return {
       ...state, 
       showLoading: action.showLoading
     };
   case LOGIN_ERROR:
-    console.log('login error');
     return {
       ...state, 
       showLoading: action.showLoading,

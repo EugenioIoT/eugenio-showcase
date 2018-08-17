@@ -12,21 +12,18 @@ const initialState = {
 const thingReducer = (state=initialState, action) => {
   switch (action.type) {
   case THING_SENT:
-    console.log('things sent');
     return {
       ...state,
       showMessage: false,
       messageType: ''
     };
   case THING_SUCCESS:
-    console.log('things success');
     return {
       ...state, 
       messageType: MessageType.INFO,
       things: action.things
     };
   case THING_ERROR:
-    console.log('things error');
     return {
       ...state, 
       messageTitle: I18n.t('ingestion.message.thingApiError'),

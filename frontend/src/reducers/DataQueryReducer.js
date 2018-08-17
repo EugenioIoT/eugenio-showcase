@@ -9,7 +9,6 @@ const initialState = {
 const dataQueryReducer = (state=initialState, action) => {
   switch (action.type) {
   case DATAQUERY_SENT:
-    console.log('query sent');
     return {
       ...state,
       showMessage: false,
@@ -19,7 +18,6 @@ const dataQueryReducer = (state=initialState, action) => {
       showLoading: action.showLoading
     };
   case DATAQUERY_SUCCESS:
-    console.log('query success');
     return {
       ...state, 
       messageTitle: I18n.t('query.message.topten'),
@@ -30,7 +28,6 @@ const dataQueryReducer = (state=initialState, action) => {
       showLoading: action.showLoading
     };
   case DATAQUERY_ERROR:
-    console.log('query error');
     return {
       ...state, 
       messageTitle: I18n.t('query.message.errorApi'),

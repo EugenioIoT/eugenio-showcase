@@ -16,7 +16,6 @@ class ThingsInvokeContainer extends Component {
   onChange = (newJson) => this.setState({ json: newJson });
 
   thingsInvoke = (deviceId, json) => {
-    console.log('action thing invoke container');
     this.props.fetchThingsInvoke(deviceId, json);
   };
 
