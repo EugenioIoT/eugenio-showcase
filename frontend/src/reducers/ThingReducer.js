@@ -28,7 +28,7 @@ const thingReducer = (state=initialState, action) => {
   case THING_ERROR:
     return {
       ...state, 
-      messageTitle: I18n.t('ingestion.message.thingApiError'),
+      messageTitle: I18n.t('thing.message.errorApi'),
       specificmessageTitle: state.message,
       showMessage: true,
       messageType: MessageType.ERROR,

@@ -58,10 +58,10 @@ const mapStateToProps = (state) => {
   const thingstate = state.thing;
   return {
     things: thingstate.things,
-    messageTitle: thingsInvokeState.messageTitle,
-    specificmessageTitle: thingsInvokeState.specificmessageTitle,
-    showMessage: thingsInvokeState.showMessage,
-    messageType: thingsInvokeState.messageType,
+    messageTitle: thingsInvokeState.messageTitle || thingstate.messageTitle,
+    specificmessageTitle: thingsInvokeState.specificmessageTitle || thingstate.specificmessageTitle,
+    showMessage: thingsInvokeState.showMessage || thingstate.showMessage,
+    messageType: thingsInvokeState.messageType || thingstate.messageType,
     showLoading: thingsInvokeState.showLoading || thingstate.showLoading
   }
 }

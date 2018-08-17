@@ -59,10 +59,10 @@ const mapStateToProps = (state) => {
   return {
     result: ingestionState.result,
     schemas: schemaState.schemas,
-    messageTitle: ingestionState.messageTitle,
-    specificmessageTitle: ingestionState.specificmessageTitle,
-    showMessage: ingestionState.showMessage,
-    messageType: ingestionState.messageType,
+    messageTitle: ingestionState.messageTitle || schemaState.messageTitle,
+    specificmessageTitle: ingestionState.specificmessageTitle || schemaState.specificmessageTitle,
+    showMessage: ingestionState.showMessage || schemaState.showMessage,
+    messageType: ingestionState.messageType || schemaState.messageType,
     showLoading: ingestionState.showLoading || schemaState.showLoading
   }
 }

@@ -45,6 +45,11 @@ I18n.setTranslations({
         errorApi: 'Error when trying to execute query'
       }
     },
+    thing: {
+      message: {
+        errorApi: 'Error when trying to list things'
+      }
+    },
     command: {
       title: 'Command Device',
       text: 'Command',
