@@ -25,11 +25,15 @@ class IngestionContainer extends Component {
 
   setSchema = (event) => {
     const index = event.target.value;
-    const selectedSchema = this.props.schemas[index];
-    this.setState({ 
-      schema: selectedSchema,
-      jsonSchema: JSON.stringify(selectedSchema.fields, null, "\t"),
-    });
+    if (index === "") {
+      this.setState({ schema: null, jsonSchema:"" });
+    } else {
+      const selectedSchema = this.props.schemas[index];
+      this.setState({ 
+        schema: selectedSchema,
+        jsonSchema: JSON.stringify(selectedSchema.fields, null, "\t"),
+      });
+    }
   }
 
   render() {
