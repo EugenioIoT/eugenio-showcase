@@ -9,13 +9,13 @@
 	<packaging>jar</packaging>
 
 	<name>eugenio-showcase</name>
-	<description>Demo project for Spring Boot</description>
+	<description>Eugenio Showcase Web Application</description>
 
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
 		<version>2.0.3.RELEASE</version>
-		<relativePath/> <!-- lookup parent from repository -->
+		<relativePath/>
 	</parent>
 
 	<properties>
@@ -34,10 +34,6 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
-<!--         <dependency> -->
-<!--             <groupId>org.springframework.boot</groupId> -->
-<!--             <artifactId>spring-boot-starter-security</artifactId> -->
-<!--         </dependency> -->
 		<dependency>
 			<groupId>com.logicalis</groupId>
 			<artifactId>eugenio-client</artifactId>
